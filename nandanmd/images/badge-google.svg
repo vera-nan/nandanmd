@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="80" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="bgg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F7F5F1"/>
+      <stop offset="100%" style="stop-color:#EDE9E3"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="80" rx="6" fill="url(#bgg)" stroke="rgba(139,115,85,0.2)" stroke-width="1"/>
+  <text x="100" y="38" font-family="Georgia, serif" font-size="18" font-weight="600" text-anchor="middle" fill="#8B7355">Google</text>
+  <text x="100" y="54" font-family="sans-serif" font-size="12" text-anchor="middle" fill="#5C5956">Reviews</text>
+</svg>

@@ -1,0 +1,36 @@
+# Decap CMS – for the provider to add/update images without coding
+# Site must be deployed on Netlify with repo connected; enable Netlify Identity and Git Gateway.
+
+backend:
+  name: git-gateway
+  branch: main
+
+locale: en
+
+media_folder: "images/gallery"
+public_folder: "/images/gallery"
+
+collections:
+  - name: gallery
+    label: Gallery (before & after photos)
+    folder: "content/gallery"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Procedure", name: "procedure", widget: "select", options: ["breast-lift", "breast-reduction", "breast-augmentation", "breast-reconstruction", "tummy-tuck", "eyelid-surgery"] }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Caption (optional)", name: "caption", widget: "text", required: false }
+
+  - name: site_images
+    label: Site images (hero & banners)
+    folder: "content/site-images"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Image type", name: "type", widget: "select", options: ["page-hero", "home-hero", "section-background"] }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Notes (for your reference)", name: "notes", widget: "text", required: false }

@@ -1,0 +1,4 @@
+# Netlify: static site; build generates gallery.json from CMS content
+[build]
+  publish = "."
+  command = "node scripts/generate-gallery.js"
